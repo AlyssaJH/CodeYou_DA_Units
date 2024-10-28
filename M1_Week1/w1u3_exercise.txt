@@ -1,0 +1,26 @@
+# Write a program that uses input() to retrieve values for first name, last name, and email address.
+# Output the entered values afterward. 
+
+
+first_name = input("Please enter your first name: ")
+last_name = input("Please enter your last name: ")
+email = input("Please enter your email address: ")
+
+print(first_name)
+print(last_name)
+print(email)
+
+
+-----------------------------------------------------------------------------------------------------
+# Write a program that uses input() to accept two numbers from a user and output the sum and the product of both numbers. 
+
+
+number_1 = int(input("Please enter a number (integer): "))
+number_2 = int(input ("Please enter another number (integer): "))
+
+sum = str(number_1 + number_2)
+product = str(number_1 * number_2)
+
+print("The sum is " + sum)
+print("The product is " + product)
+

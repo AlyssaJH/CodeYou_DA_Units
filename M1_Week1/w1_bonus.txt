@@ -1,0 +1,24 @@
+# A quadratic equation is an equation that can be written as "ax^2 + bx + c = 0".
+# In this equation, "x" represents an unknown number, and "a", "b", and "c" represent known numbers.
+# Possible solutions for a given quadratic equation can be calculated by the formula.
+# The expression "b^2-4ac" is called the discriminant. Using the discriminant makes it easy to check the number of solutions for a given quadratic equation:
+	# If the discriminant is 0, the quadratic equation has exactly one real solution.
+	# If the discriminant is > 0, the quadratic equation has two real solutions.
+	# If the discriminant is < 0, the quadratic equation has two complex solutions.
+# Write a program that asks the user for the numbers "a", "b" and "c". The program should then print out how many solutions the quadratic equation has.
+
+
+
+
+a_value = int(input("Please enter the value of a: "))
+b_value = int(input("Please enter the value of b: "))
+c_value = int(input("Please enter the value of c: "))
+
+discriminant = (b_value ** 2) - (4 * a_value * c_value)
+
+if discriminant == 0:
+	print("The quadratic equation has one real solution.")
+elif discriminant > 0:
+	print("The quadratic equation has two real solutions.")
+else:
+	print("The quadratic equation has two complex solutions.")

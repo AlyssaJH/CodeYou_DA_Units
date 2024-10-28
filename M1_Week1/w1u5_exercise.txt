@@ -1,0 +1,14 @@
+# Write a conditional statement that asks for the user's name. 
+# If his name is "Harry" or "Harry Potter", then output "Welcome to Gryffindor, Mr. Potter!". 
+# Otherwise, output "Sorry, Hogwarts is full.".
+
+
+user_name = input("Please enter your name: ")
+user_name.lower
+
+if user_name == "harry":
+    print("Welcome to Gryffindor, Mr. Potter!")
+elif user_name == "harry potter":
+    print("Welcome to Gryffindor, Mr. Potter!")
+else:
+    print("Sorry, Hogwarts is full.")

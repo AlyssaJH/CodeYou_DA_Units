@@ -1,0 +1,33 @@
+# Calculate the volume and surface area of a cube (side lengths a, b, c equal) or a cuboid (side lengths a, b, c different). 
+# Define reasonable names for the variables representing the side length of the cube and assign values to them. 
+# Calculate the area of the cube and assign the result to the variable cube_area. 
+# Calculate the volume of the cube and assign the result to the variable cube_volume. 
+# Output the results of the calculations.
+# Repead these steps for the cuboid. 
+
+------------------------------------------------------------------------------------------------
+
+
+side_a = 5
+side_b = 5
+side_c = 5
+
+cube_area = 6 * (side_a * side_b)
+cube_volume = side_a * side_b * side_c
+
+print(cube_area)
+print(cube_volume)
+
+
+------------------------------------------------------------------------------------------------
+
+
+side_a = 4
+side_b = 6
+side_c = 10
+
+cuboid_area = 2 * ((side_a * side_b) + (side_a * side_c) + (side_b * side_c))
+cuboid_volume = side_a * side_b * side_c
+
+print(cuboid_area)
+print(cuboid_volume)

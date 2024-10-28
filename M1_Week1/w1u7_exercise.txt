@@ -1,0 +1,17 @@
+# As is well known, a calendar year has 365 or 366 days. According to the Gregorian calendar, a year lasts exactly 365.2425 days, i.e. 365 days, 5 hours, 49 minutes, 12 seconds, or in other words: 31,556,952 seconds. So, roughly speaking, a year is 1/4 of a day longer than 365 days.
+# To correct this difference, leap days have been introduced. Every four years the 29th of February is inserted as a leap day. However, with this, we make a new small "mistake" because now we have a hundredth of a day too much. For this reason, every 100 years - namely, if the year number is divisible by 100 - a leap day is omitted. For example, the year 1900 was not a leap year, although it was divisible by four.
+# Albeit this is almost sufficient, we need another adjustment every 400 years, then a leap day is inserted, although the year number is divisible by one hundred. According to this rule, the year 2000 was a leap year for example.
+# With this information now write a Python program that calculates whether a given year is a leap year or not.
+
+
+
+year = int(input("Please enter a year: "))
+
+if year % 400 == 0:
+    print("The year " + str(year) + " was a leap year.")
+elif year % 100 == 0:
+    print("The year " + str(year) + " was NOT a leap year.")
+elif year % 4 == 0: 
+    print("The year " + str(year) + " was a leap year.")
+else:
+    print("The year " + str(year) + " was NOT a leap year.")

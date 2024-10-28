@@ -1,0 +1,24 @@
+# Write a program that simulates the input of an ATM. 
+# First ask for the PIN. 
+# Compare the input with a constant you have chosen. 
+# The following steps will be executed only if the correct PIN is entered:
+	# Ask how much money should be withdrawn. 
+	# Compare the amount with a fixed account balance. 
+	# If the account is covered, display a corresponding output and the new account balance. 
+	# If the account is not covered, display an appropriate error message. 
+# If the pin was entered incorrectly, issue an error message. 
+
+
+
+correct_pin = "1234"
+entered_pin = input("Please enter your PIN number (4 digits): ")
+account_balance = int(1000)
+
+if entered_pin == correct_pin:
+    withdraw = int(input("How much money would you like to withdraw? :"))
+    if withdraw > account_balance:
+        print("The amount you would like to withdraw is greater than your account balance. Please try again later.")
+    else:
+        print("The money has been issued.")
+else:
+    print("The PIN you entered is incorrect. Please try again.")
