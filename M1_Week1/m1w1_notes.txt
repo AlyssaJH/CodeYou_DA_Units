@@ -1,0 +1,124 @@
+Python programs consist of statements, which are executed one by one. 
+
+Mathematical Operators: 
+- Addition (+)
+- Subtraction (-)
+- Multiplication (*)
+- Division (/)
+- Integer Division (//)
+- Modulo (%)
+- Exponentiation (**)
+
+For integer values, there is no size constraint in Python apart from the internal memory of the machine it is running on. 
+
+
+----------------------------------------------------------------------------------------
+
+
+In programming, a variable is a name to which a value can be assigned. 
+
+- Assignment operator (=)
+
+Sequentialization sometimes helps to make a program more readable: 
+
+a = 5 * 3 * 7 + (2 - 10 * 3)
+
+becomes
+
+a = 5
+a = a * 3
+a = a * 7
+a = a + (2 - 10 *3) 
+
+On the right-hand side of an assignment, there can be complex expressions that themselves contain variables. On the left-hand side, there can only be one variable.
+
+Naming variables: 
+Must always begin with a letter or an underscore. 
+Case sensitive. 
+Must not use reserved keywords. 
+Lowercase is preferred. 
+
+- Incrementation (+=) means that a stored value is increased by one. 
+ex.
+a = 1
+a += 1
+
+
+----------------------------------------------------------------------------------------
+
+
+- print() function = The argument within the parentheses will be printed as output.
+- input() function = Can be used to read input from the user. 
+
+
+----------------------------------------------------------------------------------------
+
+
+Data types: 
+- Integer (whole numbers)
+- Float (Decimal numbers, exponential notation)
+- Boolean (Logical values, true/false)
+- "String" (Character strings)
+
+- type() = Outputs the data type of the argument within the parentheses. 
+
+Special operators for the boolean data type:
+- not
+- and 
+- or
+
+String methods:
+- .lower() = Changes all letters to lowercase. 
+- .upper() = Changes all letters to uppercase. 
+- .replace() = Used to replace a given sequence within a string with another one.
+
+Conversion functions: 
+- int() = Converts the given parameter to the integer data type. 
+- float() = Converts the given parameter to the float data type. 
+- bool() = Converts the given parameter to the boolean data type. 
+- str() = Converts the given parameter to the string data type. 
+
+
+----------------------------------------------------------------------------------------
+
+
+Comparison operators for conditional statements: 
+- == (check for equality)
+- != (check for inequality)
+- < (check for "less than")
+- > (check for "greater than")
+- <= (check for "less than or equal to")
+- >= (check for "greater than or equal to")
+
+Syntax for conditional statements: 
+
+if *condition*:
+   *statement*
+
+elif *condition*: 
+     *statement*
+
+else *condition*: 
+     *statement*
+
+
+Python does not use special characters or keywords to mark the beginning and the end of code blocks. Instead, indentation is used. 
+
+
+----------------------------------------------------------------------------------------
+
+
+Conditional statements can be nested. This means that an if statement itself can contain one or several if statements. Sometimes this is needed to check several conditions one after the other. 
+
+
+----------------------------------------------------------------------------------------
+
+
+To prevent a program from being aborted and an error message from being shown, it must be checked whether an input can be converted into a certain data type. For this purpose, Python provides several "string methods" including: 
+
+- .isdecimal()
+- .isalpha()
+- .isspace()
+
+All of these methods return a boolean value, thus they can be used to check if a string can be converted. 
+    
