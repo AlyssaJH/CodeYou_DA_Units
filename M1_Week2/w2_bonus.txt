@@ -1,0 +1,35 @@
+# In this exercise, you are going to simulate sales and operations planning using the 'zero stock level' strategy. 
+# Write a python program that asks the user to enter the following data: 
+	# An initial stock level for a product. 
+	# The number of months to plan. 
+	# The planned sales quantity for each month. 
+# Based on the data, calculate the required production quantity as follows: 
+	# If the sales quantity is smaller than the stock level of the previous month, the production quantity is 0. 
+	# If the sales quantity is larger than the stock level of the previous month, the production quantity is this difference. 
+
+
+
+
+
+initial_stock = int(input("Please enter an initial stock level: "))
+num_mos = int(input("Please enter the number of months to plan: "))
+
+sales_quantities = []
+for month in range(num_mos):
+	planned_sales = int(input("Please enter the planned sales quantity: "))
+	sales_quantities.append(planned_sales)
+
+production_quantities = []
+for month in range(num_mos):
+	if initial_stock >= sales_quantities[month]:
+		production_quantities.append(0)
+		initial_stock -= sales_quantities[month]
+	else:
+		production = sales_quantities[month] - stock
+		stock = 0
+		production_quantities.append(production)
+
+for month in range(num_mos):
+	print("Production quantity month", month, "-", production_quantity[month])
+		 
+	

@@ -1,0 +1,21 @@
+# Write a program that expects the user to enter a sentence first and then a letter. 
+# The program should output the entered sentence, removing each occurrence of the entered letter. 
+# Additionally, the output loop should be constrained to print out a maximum of 20 characters only. 
+# Hint: Using input(), first read the sentence and then the letter to be removed. Create an empty string using result = "". Then iterate over the letters. If a letter is not equal to the letter to be deleted, add that letter to the result (result += letter). After the for loop, output the variable "result". End (break) the loop early if the length of the result string is more than 20. 
+
+
+
+
+sentence = input("Please enter a sentence: ")
+sentence = sentence.lower()
+letter = input("Please enter a single letter: ")
+letter = letter.lower()
+
+result = ""
+for char in sentence:
+    if char != letter:
+        result += char
+    if len(result) > 20:
+        break
+
+print(result)

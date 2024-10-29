@@ -1,0 +1,37 @@
+# Write a Python program that expects three integer numbers as input: from, to, and increment. 
+# Then, output the numbers in that range with the appropriate increment. 
+# Note: Remember to convert the inputs to the correct data type. 
+
+
+
+
+range_from = int(input("Where should the range start (integer): "))
+range_to = int(input("Where shoud the range end (integer): "))
+range_increment = int(input("Choose an increment (integer): "))
+
+
+for number in range(range_from, range_to, range_increment):
+    print(number)
+
+
+
+------------------------------------------------------------------------
+
+# FizzBuzz
+# Write a program that outputs the numbers from 1 to 100. 
+# All numbers that are divisible by 3 should be replaced by "Fizz". 
+# All numbers that are divisible by 5 should be replaced by "Buzz".
+# Numbers that are divisible by both 3 and 5 should be replaced by "FizzBuzz". 
+# Note: You can check divisibility with the modulo operator (%).
+
+
+
+for number in range(1,101):
+    if number % 3 == 0 and number % 5 == 0:
+        print("FizzBuzz")
+    elif number % 3 == 0:
+        print("Fizz")
+    elif number % 5 == 0:
+        print("Buzz")
+    else: 
+        print(number)

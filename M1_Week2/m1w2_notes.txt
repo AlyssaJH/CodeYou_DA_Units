@@ -1,0 +1,124 @@
+A list is one of the sequence types in Python. 
+Square brackets are used to create a list. 
+The individual items of a list are separated by commas. 
+Just like primitive data types, lists can be assigned to variables. 
+Lists can contain any data type. 
+Lists can contain a mix of different data types. 
+
+
+Basic operations on lists: 
+- Concatenation (+) = Combines multiple lists into one. 
+- Multiplication (*) = Repeats a list a given number of times.
+- Containment (in) = Checks if a given element is contained in a list. 
+
+
+------------------------------------------------------------------------
+
+Each item in a Python list is indexed. 
+The index starts at 0. 
+Additionally, each list in Python has a second index in which items are indexed backward starting with -1. 
+
+
+- list_name[#] = Accesses the item in the list at the given index. 
+
+
+Lists can also contain lists. 
+
+
+- list_name[#][#] = Accesses an item in the inner list of a nested index. 
+
+
+Strings in Python are also a sequence type. Therefore, it is possible to access the individual letters in a string by using indices. 
+
+
+------------------------------------------------------------------------
+
+(A method is executed or invoked by calling the object's name followed by a "." followed by the method's name. 
+In contrast to methods, functions do not depend on an object. Thus, they are executed by simply calling their name. The object, e.g. the list, has to be handed over as an argument in parentheses.)
+
+
+Important functions available for sequence types: 
+
+- len() = Returns the length of a sequence.
+- min() = Returns the smallest item in a list. 
+- max() = Returns the largest item in a list. 
+- sorted() = Returns a new list in which the items of the original sequence have been sorted. 
+
+Important methods available for lists (not for strings): 
+
+- .sort() = Modifies the original list by sorting the items of the sequence. 
+- .append() = Adds a new item to the end of a list. 
+- .pop() = Removes the last element of a list and assigns this element to a variable. 
+- .insert() = Adds an item at a specific position on a list. 
+- .remove() = Removes the first occurrence of an item. 
+
+
+(Methods modify the original sequence, functions do not.)
+
+
+------------------------------------------------------------------------
+
+
+Syntax of the "for loop" in Python: 
+
+*for* variable *in* sequence: 
+	statement 
+	statement 
+	statement 
+
+
+------------------------------------------------------------------------
+
+
+- range(#,#) = Accesses a portion of a sequence. (If only one number is specified, the range starts from 0.)(The starting point IS part of the sequence, but the ending point is NOT). 
+
+By adding a third parameter (step size), the distance between the numbers in the interval can be defined. 
+
+Ranges can be used in combination with the for loop to control the number of loop passes. 
+
+
+------------------------------------------------------------------------
+
+
+Standard sequence types: list, range, tuple. 
+
+Note: Not all operations work on all sequences. For example, a range can not be multiplied with an integer to create a longer range. 
+
+
+------------------------------------------------------------------------
+
+
+With the help of the slice operator (:), you can access parts of a sequence. 
+
+- list[start:stop] = Creates a new sub-sequence from the original (start to stop - 1). 
+- list[start:] = The sub-sequence ends with the last element of the original sequence. 
+- list[:stop] = The sub-sequence starts with the first element of the original sequence. 
+- list [:] = Accesses the beginning of the sequence to the end of the sequence. This is essentially a copy of the sequence. 
+
+
+Negative indexing examples: 
+
+list[-1] = Returns the index of the last item. 
+list[-2:] = Returns items from index -2 to the end of the list. 
+list[:-3] = Returns items from the start of the list to index -3. 
+
+
+The step size parameter can still be used to specify the increment while slicing. So, the whole slicing operator becomes list[start:stop:step]. 
+
+When using a negative step size, the returned list will be backward (e.g. list[::-1] will return the complete list, but in reversed order).
+Note: This has the side effect that the start and stop parameters seem to be switched.  
+
+
+------------------------------------------------------------------------
+
+List comprehension = A compact way to process all or part of the elements in a sequence and return a list with the results. 
+
+Using list comprehension it is possible to (1) create a new list by performing operations on the elements of an existing sequence and (2) create a new list by filtering the elements of an existing sequence. 
+
+Example of list comprehension: 
+numbers = list(range(1,21))
+squares = [x ** 2 *for* x *in* numbers]
+If only the list of squares is needed:
+squares = [x ** 2 for x in range(1,21)]
+
+
