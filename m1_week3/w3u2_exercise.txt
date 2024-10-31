@@ -1,0 +1,42 @@
+# Create a dictionary which consists of the colors red, green, blue, and yellow as keys and the German translations rot, grun, blau, and gelb as values. 
+# Using input (), ask for another English color and its German translation. 
+# Add this pair to the dictionary. 
+
+
+eng_to_ger = {
+    "red":"rot", 
+    "green":"grun", 
+    "blue":"blau", 
+    "yellow":"gelb",
+}
+
+print(eng_to_ger)
+
+new_color_eng = input("Please enter a color in english: ")
+new_color_ger = input("Now enter the german translation of that color: ")
+
+eng_to_ger[new_color_eng] = new_color_ger
+
+print(eng_to_ger)
+
+
+---------------------------------------------------------------------------------------
+
+# Now make use of the translation dictionary from the last exercise.
+# Using input(), ask for a color and give the translation as output. 
+
+
+
+eng_to_ger = {
+    "red":"rot", 
+    "green":"grun", 
+    "blue":"blau", 
+    "yellow":"gelb",
+}
+
+print(eng_to_ger.keys())
+
+to_translate = input("Enter one of the above colors to translate into German: ")
+to_translate = to_translate.lower()
+
+print("The German word for", to_translate, "is", eng_to_ger[to_translate] + ".")

@@ -1,0 +1,59 @@
+# A list of students is given. All students are defined using a tuple. 
+# Implement input() statements asking for the data of a new student. 
+# Combine the data into a tuple, then append the tuple to the list of students. 
+# Print the list using a for loop. 
+
+
+list_of_students = [
+    ("Potter", "Harry", 477264, "harry@hogwarts.wiz", "Defence Against the Dark Arts"),
+    ("Weasley", "Ron", 490134, "ron@hogwarts.wiz", "Care of Magical Creatures"),
+    ("Granger", "Hermione", 471617, "hermione@hogwarts.wiz", "Alchemy"),
+    ("Creevey", "Colin", 432646, "colin@hogwarts.wiz", "Music"),
+    ("Finnigan", "Seamus", 481989, "seamus@hogwarts.wiz", "Ancient Studies"),
+    ("Abbott", "Hannah", 488962, "hannah@hogwarts.wiz", "Apparition"),
+    ("Parkinson", "Pansy", 482103, "pansy@hogwarts.wiz", "Dark Arts"),
+    ("Malfoy", "Draco", 492010, "draco@hogwarts.wiz", "Defence Against the Dark Arts"),
+    ("Thomas", "Dean", 447924, "dean.thomas@hogwarts.wiz", "Divination"),
+]
+
+last_name = input("Please enter your last name: ")
+first_name = input("Please enter your first name: ")
+id = input("Please enter your 6 digit ID: ")
+email = input("Please enter your email: ")
+specialty = input("Please enter your specialty: ")
+
+new_student = (last_name, first_name, id, email, specialty)
+
+list_of_students.append(new_student)
+
+for tuple in list_of_students:
+    print(tuple)
+
+---------------------------------------------------------------------------------------------------
+
+# Take the list of students from the above exercise and transform it into a dictionary of tuples. 
+# Each student will be stored as a tuple. 
+# The ID should be used as the key for the dictionary. 
+# That means a new tuple should be created, which contains all of the elements from the old student tuple, but not the ID. 
+
+
+student_dictionary = {}
+count = -1
+for tuple in list_of_students:
+    count += 1
+    student_dictionary[list_of_students[count][2]] = list_of_students[count][:2] + list_of_students[count][3:]
+
+for key in student_dictionary:
+    print(key, "=", student_dictionary[key])
+
+
+---------------------------------------------------------------------------------------------------
+
+# Take the results of the last exercise. 
+# With a for loop, iterate over the dictionary. The value is always a tuple. 
+# This tuple should be transformed into a dictionary. Choose appropriate names for each entry.
+
+
+for key in student_dictionary: 
+    student_dictionary[key] = {student_dictionary[key][0]:student_dictionary[key][1:]}
+    print(key, "=", student_dictionary[key])

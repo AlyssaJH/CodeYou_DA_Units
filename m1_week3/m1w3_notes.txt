@@ -1,0 +1,131 @@
+While lists are mutable, tuples are not. 
+Lists are represented by brackets [], tuples are represented by parentheses ().
+
+
+TUPLES CAN NOT BE MODIFIED. 
+THERE ARE NO METHODS FOR TUPLES THAT WOULD MODIFY THEM. 
+
+
+Lists are used for many similar items. 
+Tuples are used for items with many attributes. 
+
+
+Just like lists, tuples have an index. It is represented by square brackets just like a list. 
+As usual, the index starts at 0. 
+Negative indices can be used. 
+
+
+The slicing operator already known from lists also works with tuples to create a sub-tuple. 
+
+
+Functions/methods for tuples: 
+- len(tuple) = Number of elements in a tuple. 
+- tuple.count(x) = Number of elements in the tuple with value x. 
+- tuple.index(x) = Index of the first element with value x. 
+
+
+Similar to lists, a for loop can be used to access individual elements of a tuple.
+
+
+- list() = Converts the argument into a list. 
+- tuple() = Converts the argument into a tuple. 
+
+
+----------------------------------------------------------------------------------
+
+
+Within a dictionary, the elements are not accessed by their index, but by name. 
+Instead of "name", the more general term "key" is used. 
+Dictionaries are represented by curly braces {}. 
+key:value pairs. 
+
+
+To access individual elements: 
+dictionary[x]
+
+
+To add a new key:value pair: 
+dictionary[key] = value
+Can also be used to overwrite an existing key:value. 
+
+
+
+KEYS ARE IMMUTABLE. VALUES ARE MUTABLE. 
+
+
+To delete an element: 
+del dictionary[x]
+
+
+Just like with lists and tuples, you can iterate over a dictionary with the for loop. 
+
+
+Functions/methods for dictionaries: 
+- len() = Number of key:value pairs in the dictionary. 
+- .keys() = All keys of a dictionary. 
+- .values() = All values of a dictionary. 
+- .items() = All key:value pairs as tuples. 
+
+
+----------------------------------------------------------------------------------
+
+
+Lists should be used for many objects of the same data type. 
+Tuples should be used for many objects of differing data types. 
+Dictionaries should be used when the objects that need to be handled have a unique ID. 
+
+
+A dictionary of tuples might be an option if you get your data from relational databases. 
+
+
+----------------------------------------------------------------------------------
+
+
+To avoid a key error, use the keyword "in". 
+"key in dict" returns the value "true" if the key exists in the dictionary. 
+
+Another possibility to prevent an error is the get() method to get the value of the input key:
+dict.get(key, default)
+The "default" argument is optional. If you do not pass this argument, it will return "none" as a default value and raise no error. 
+
+
+----------------------------------------------------------------------------------
+
+
+Important functions for complex data types (lists, tuples, and dictionaries):
+- .sort() = Sorts the object. 
+- .append(x) = Adds x to the end of the object. 
+- .pop(i) = Removes the item at index x from the object.
+- .insert(i,x) = Inserts x at index i. 
+- .remove(x) = Removes the first occurrence of x. 
+- .count(x) = Counts the number of occurrences of x. 
+- .index(x) = Returns the index of x. 
+- .keys() = Returns all keys of a dictionary. 
+- .values() = Returns all values of a dictionary. 
+- .items() = Returns all items of a dictionary. 
+
+
+Important methods for complex data types: 
+- del object[item] = Deletes item from object. 
+- len(object) = Returns the length of the object. 
+- min(object) = Returns the smallest item of the object. 
+- max(object) = Returns the largest item of the object. 
+- sorted() = Returns a sorted list of the input. 
+
+
+-----------------------------------------------------------------------------------
+
+
+The for loop fits when you have a sequence. 
+For situations where no sequence is available and yet a certain operation needs to be repeated multiple times, use a while loop. 
+
+Syntax of the while loop: 
+*while* condition: 
+	statement 
+	
+
+A loop can be exited early using the "break" statement. 
+
+while true
+while not
+

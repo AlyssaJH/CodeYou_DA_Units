@@ -1,0 +1,21 @@
+# The value of a property increases by p percent every year. 
+# Write a program that calculates the value of the property for each year until the value has doubled. 
+# Use input() to ask for the percentage and the initial value. 
+
+
+
+property_value = int(input("What is the value of the property?: "))
+increase = int(input("By what percentage does the value increase per year (integer)?: "))
+value_doubled = property_value * 2
+
+print("Year 0 =", property_value)
+year = 0
+while property_value <= value_doubled:
+    year += 1
+    property_value = property_value * (1 + (increase/100))
+    print("year", year, "=", property_value)
+
+print("The property value will double in", year, "years.")
+
+
+

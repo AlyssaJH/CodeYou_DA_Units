@@ -1,0 +1,31 @@
+# Implement a Caesar cipher with a variable shift. 
+# The program should ask the user for the number of characters for the shift. 
+# Then the program should ask the user for a plain text sentence and print the encrypted text. 
+
+
+
+
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet_caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+to_shift = input("Enter a sentence to shift: ")
+shift_amount = int(input("Enter the number of places to shift: "))
+
+shifted_sentence = ""
+while shift_amount > 25 or shift_amount < -25: 
+    print("The number must be between -25 and 25.")
+    break
+if shift_amount < 25 and shift_amount > -25:
+    for letter in to_shift: 
+        if letter in alphabet:
+            index = int(alphabet.index(letter)) + shift_amount
+            letter = alphabet[index]
+            shifted_sentence += letter
+        elif letter in alphabet_caps:
+            index = int(alphabet_caps.index(letter)) + shift_amount
+            letter = alphabet_caps[index]
+            shifted_sentence += letter
+        else:
+            shifted_sentence += letter   
+    print("The original sentence was:", to_shift)
+    print("The shifted sentence is:", shifted_sentence)
